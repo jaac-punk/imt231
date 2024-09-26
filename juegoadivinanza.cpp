@@ -17,7 +17,7 @@ int adivina;
      cout<< "Tentativa" << intentos << endl;
      cout<< "cual es el numero?" << endl;
      cin >> adivina;
-     double puntos_perdidos = abs(adivina - NUMERO_SECRETO)/2;
+     double puntos_perdidos = abs(adivina - NUMERO_SECRETO)/2.0;
      puntos = puntos - puntos_perdidos;
      cout << "El valor de su  numero es: "<< adivina << endl;
 
@@ -44,6 +44,8 @@ int adivina;
 
 cout << "finalizo el juego"<< endl;
 cout << "adivina el numero secreto en" << intentos <<"intentos." << endl;
+cout.precision(2);
+cout << fixed;
 cout <<" su puntuacion fue de " << puntos << "puntos" << endl;
 }
 
